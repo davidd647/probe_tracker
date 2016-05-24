@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Probe Tracker 07</title>
+	<link rel="stylesheet" href="style/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" style="text/css" href="css/font-awesome.css"> -->
+	<link rel="stylesheet" href="style/font-awesome.css">
+
+	<!-- scrollbar (there is a js file down below) -->
+	<link rel="stylesheet" href="scrollbar/jquery.mCustomScrollbar.min.css">
+
+
+</head>
+<body id="top">
+	<div class="wrapper">
+		<h1>Probe Tracker 07</h1>
+		<div class="intro">
+			<h2>Primer</h2>
+			<p class="clearfix">This project was created to amalgamate information from Wolfram Alpha and Wikipedia to track active deep space probes and encourage scientific discourse!</p>
+			<!-- twitter, email, linkedin -->
+			<div class="finish_intro_bttn clearfix">Continue...</div>
+		</div>
+		<div class="selection">
+			<h2>Choose a Space Probe</h2>
+			<p class="first_selection_par">1. Select from the list of active probes:</p>
+			<select>
+			  <option value="voyager_1">Voyager 1</option>
+			  <option value="voyager_2">Voyager 2</option>
+			  <option value="pioneer 10">Pioneer 10</option>
+			  <option value="pioneer 11">Pioneer 11</option>
+			  <option value="juno space probe">Juno</option>
+			  <option value="new_horizons">New Horizons</option><!-- in wolfram alpha, it's "new horizons spacecraft"-->
+			  <!-- <option value="exoMars">Exomars Orbiter</option> -->
+			  <option value="dawn spacecraft">Dawn</option>
+
+
+			  <!-- some more missions:
+				
+			   -->
+			</select>
+			<p>2. Think of our potential as humans!</p>
+			<p>3. Click continue</p>
+			<!-- <input type="submit"> -->
+			<div class="finish_selection_bttn">Continue...</div>
+		</div>
+		<h3></h3>
+		<div class="wiki_info">
+			<h2>Wikipedia Data</h2>
+			<!-- Will add content retroactively through JS -->
+			<p class="mCustomScrollbar"><span class="wiki_text"></span><span class="cursor">_</span></p>
+		</div>
+		<div class="wolfram_info">
+			<h2>Wolfram Alpha Data</h2>
+			<ul><li> <span class="cursor">_</span></li></ul>
+			<div class="wolfram_image"></div>
+			<!-- Will add content retroactively through JS -->
+		</div>
+		<div class="solar_sys">
+			<h2>Relative Position of Probe</h2>
+			<div class="probe_location"><p class="cursor probe_indicator">Probe is here</p></div>
+			<div class="sizer">
+			  <div class="special_wrapper">
+			    <div class="solar-system">
+			      <div class="positioner sun"></div>
+			      <div class="orbit positioner mercury">
+			        <div class="planet"></div>
+			      </div>
+			      <div class="orbit positioner venus">
+			        <div class="planet"></div>
+			      </div>
+			      <div class="orbit positioner earth">
+			        <div class="planet"></div>
+			      </div>
+			      <div class="orbit positioner mars">
+			        <div class="planet"></div>
+			      </div>
+			      <div class="orbit positioner jupiter">
+			        <div class="planet"></div>
+			      </div>
+			      <div class="orbit positioner saturn">
+			        <div class="planet"></div>
+			      </div>
+			      <div class="orbit positioner uranus">
+			        <div class="planet"></div>
+			      </div>
+			      <div class="orbit positioner neptune">
+			        <div class="planet"></div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<p class="distance_info"></p>
+
+		</div>
+		<div class="restart_bttn"><a href="#top">Restart?</a></div>
+		<div class="more">
+			<a href="https://twitter.com/d2dev_"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="https://ca.linkedin.com/in/david-dales-62753455"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+			<a href="mailto:david.c.dales@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+			<a href="http://www.d2dev.io"><img src="../favicon.ico" alt="Main page logo"></a>
+		</div>
+		<p class="credit">Created by: d2dev_</p>
+	</div>
+
+	<!-- more -->
+
+
+	<div class="space">
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- scrollbar (there is a css file up top) -->
+		<script src="scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script src="script.js"></script>
+</body>
+</html>

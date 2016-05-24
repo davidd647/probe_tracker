@@ -1,0 +1,624 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+////////////////////////////
+////////////////////////////
+////////////////////////////
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(200,200,200,.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(200,200,200,.8); 
+}
+
+
+body{
+	padding-top: 25px;
+	color:rgb(200,200,200);
+	font-family:'Titillium Web', sans-serif;
+}
+
+html body h1{
+  color: rgba(255,0,0,0.5);
+  text-transform: uppercase;
+}
+
+h1, h2{
+	color: rgba(200,200,200,0.8);
+	text-align:left;
+	border-bottom:1px solid rgb(200,200,200);
+	padding: 0 25px;
+}
+
+h3{
+  color: rgba(255,0,0,0.5);
+  text-align:center;
+  border-bottom: 1px solid rgba(200,200,200,0.8);
+  padding: 0 25px;
+}
+
+div{
+	margin:10px;
+}
+
+p{padding: 5px 25px;}
+
+ul{
+	list-style:none;
+	padding: 0 25px;
+}
+a{
+  text-decoration: none;
+  color: rgba(200,200,200,0.8);
+}
+
+.wrapper{
+	margin: 0 auto;
+	width:66%;
+	display:flex; 
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+
+.intro, .selection{
+	padding: 0;
+	text-align:center;
+	// border-radius: 0 0 25px 0;
+	background: rgba(102, 51, 153,.4);
+  position:relative;
+}
+.intro{
+  width:100%;
+  overflow: hidden;
+  // height: 300px;
+  p{
+    margin:50px 0;
+    padding: 1px 1px 25px 1px;
+    display:inline;
+  }
+  // .fa{
+  //   right: 20px;
+  //   top: 20px;
+  //   font-size:36px;
+  // }
+  h2{
+    margin-bottom:35px;
+  }
+}
+
+.selection, .solar_sys{
+	height: 100px;
+	overflow:hidden;
+	width: 100%;
+  .first_selection_par{
+    padding-top:25px;
+  }
+}
+
+.wolfram_info, .wiki_info{
+	position: relative;
+  float:left;
+	// width:calc(50% - 20px);
+	width:100%;
+	background: rgba(102, 51, 153,.4);
+	h2{
+    margin-bottom:10px;
+  }
+  p{
+		margin-top:-15px;
+    padding:1px 20px 10px 20px;
+    overflow-y:scroll;
+        // Let's get this party started
+
+    max-height:250px;
+	}
+  .wolfram_image{
+    position:absolute;
+    top: 75px;
+    right: 15px;
+    width:100px;
+    height:100px;
+  }
+}
+	.wolfram_info{
+		height:100px;
+	}
+	.wiki_info{
+		height: 100px;
+    line-height: 2rem;
+	}
+
+.solar_sys{
+	float:left;
+	background: rgba(102,51,153,.4);
+	height:100%;
+  position:relative;
+	overflow: hidden;
+	height: 100px;
+  .probe_location{
+    border: 0 solid transparent;
+    border-top: 5px solid white;
+    border-left:5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top:55%;
+    // right: 50%;
+    right:75px;
+    width: 5px;
+    height:5px;
+    display:none;
+    .probe_indicator{
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top: -50px;
+      left: calc(50% - 25px);
+      font-size:0.8rem;
+      text-align:center;
+      width: 50px;
+      text-transform: uppercase;
+      display:none;
+    }
+  }
+  .distance_info{
+    position:absolute;
+    left:10px;
+    bottom:10px;
+    width:66%;
+  }
+}
+
+// .credit{
+// 	position:fixed;
+// 	right: 10px;
+// 	bottom: 50px;
+// 	font-size:0.8em;
+// }
+
+.finish_intro_bttn, .finish_selection_bttn, .restart_bttn{
+	background-color: rgba(255, 0, 0, 0.1);
+	width: 30%;
+	margin: 10px auto;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+  text-align:center;
+}
+.finish_intro_bttn:hover, .finish_selection_bttn:hover, .restart_bttn:hover{
+		background-color: rgba(255,0,0,0.5);
+}
+
+.more{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .fa, img{
+    margin:25px;
+    height:36px;
+    width:36px;
+    margin: 25px;
+    font-size: 36px;
+    transition: color 1s ease-in-out;
+  }
+  .fa:hover{
+    color: rgba(255, 0, 0, 0.5);
+  }
+}
+
+
+
+///////////////////////////////////////
+// SPACE BACKGROUND
+//////////////////////////////////////
+	/* Animations */
+
+	@keyframes spin {
+	  
+	  from {
+	    transform: rotate( 0deg );
+	  }
+	  
+	  to {
+	    transform: rotate( 360deg );
+	  }
+	}
+
+	/* Global */
+
+	html {
+	  height: 100%;
+	  overflow: hidden;
+	  overflow-y:scroll;
+	}
+
+	body {
+	  background-color: #111;
+	  height: 100%;
+	}
+
+	/* Space */
+
+	.space {
+	  position: absolute;
+	  z-index: -10;		//make sure the space bg is in the bg
+	  width: 400vw;		//because if it were truly in the bg, it
+	  height: 400vh;	//would manipulate everything on top of it!
+	  top: 50%;
+	  left: 50%;
+	  margin-top: -200vh;
+	  margin-left: -200vw;
+	  animation: spin 240s linear infinite;
+	  background-size: 240px;
+	  backface-visibility: visible;
+	  
+	  /* Had to base64 SVG background for FF compatibility */
+	  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0MCAyNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IHg9IjEwNiIgeT0iOTAiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz48cmVjdCB4PSI3NCIgeT0iNjMiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIyMyIgeT0iNjYiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSI1MCIgeT0iMTEwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iNjMiIHk9IjEyOCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjQ1IiB5PSIxNDkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSI5MiIgeT0iMTUxIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iNTgiIHk9IjgiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNDciIHk9IjMzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+PHJlY3QgeD0iOTEiIHk9IjQzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMTY5IiB5PSIyOSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjE4MiIgeT0iMTkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNjEiIHk9IjU5IiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMTM4IiB5PSI5NSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjE5OSIgeT0iNzEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiLz48cmVjdCB4PSIyMTMiIHk9IjE1MyIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjIiIGhlaWdodD0iMiIvPjxyZWN0IHg9IjEyOCIgeT0iMTYzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMjA1IiB5PSIxNzQiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNTIiIHk9IjIwMCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjUyIiB5PSIyMTEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz48cmVjdCB5PSIxOTEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxMTAiIHk9IjE4NCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==);
+	}
+
+	// Cursors
+
+	// .text, .cursor {
+	// 	display: block;
+	// 	font-size: 1rem;
+	// 	line-height: 1;
+	// 	white-space: nowrap;
+	// }
+
+	// @keyframes text-expand {
+	// 	from 	{width: 0ch; }
+	// 	1%		{width: 1ch; }
+	// 	2%		{width: 2ch; }
+	// 	3%		{width: 3ch; }
+	// 	4%		{width: 4ch; }
+	// 	25% 	{width: 6ch; }
+	// 	26%		{width: 7ch; }
+	// 	27%		{width: 8ch; }
+	// 	50% 	{width: 10ch;}
+	// 	51% 	{width: 11ch;}
+	// 	52%		{width: 12ch;}
+	// 	// 53%		{width: 13ch;}
+	// 	// 54%		{width: 14ch;}
+	// 	// 55%		{width: 15ch;}
+	// 	// 60% 	{width: 17ch;}
+	// 	// 61%		{width: 18ch;}
+	// 	// 70%		{width: 20ch;}
+	// 	// 71%		{width: 21ch;}
+	// 	// 72%		{width: 22ch;}
+	// 	// 73%		{width: 23ch;}
+	// }
+
+	// .text {
+	// 	animation: text-expand 10s steps(1) infinite;
+	// 	overflow: hidden;
+	// 	width: 0ch;
+	// }
+
+
+	@keyframes blink {
+		from, to {opacity:0;}
+		60% {opacity: 1;}
+	}
+	.cursor {
+		animation: blink 2s steps(1) infinite;
+	}
+
+
+//////////////////////////////////
+//ORBITAL MECHANICS
+//////////////////////////////////
+
+// Earth orbital period
+$earth-orbit: 25s;
+
+$color-bg: #051628;
+$color-sun: #f9e14b;
+$color-mercury: #736f66;
+$color-venus: #b66e6f;
+$color-earth: #22adc2;
+$color-mars: #d02746;
+$color-jupiter: #f2a566;
+$color-saturn: #d5b979;
+$color-uranus: #d6fcfd;
+$color-neptune: #00749a;
+
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// body {
+//   background-color: $color-bg;
+//   overflow: hidden;
+// }
+
+// h1 {
+//   border-bottom: 2px solid white;
+//   color: white;
+//   display: inline-block;
+//   font-family: 'Poiret One', sans-serif;
+//   font-weight: normal;
+//   font-size: 42px;
+//   left: 0;
+//   padding: 0.5em 0.5em 0.25em;
+//   position: absolute;
+//   top:0;
+//   z-index: 9;
+// }
+
+.sizer {
+  align-items: center;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 200px;
+  float:right;
+}
+
+.special_wrapper {
+  padding-bottom: 80%;
+  position: relative;
+  width: 80%;
+}
+
+.solar-system {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.positioner {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.orbit {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: orbit;
+  animation-timing-function: linear;
+}
+
+.planet,
+.sun {
+  border-radius: 50%;
+  display: block;
+}
+
+.planet {
+  background-color: currentColor;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.sun {
+  background-color: $color-sun;
+  height: 11.5%;
+  width: 11.5%;
+}
+
+.mercury {
+  animation-delay: -0.95 * (0.24 * $earth-orbit);
+  animation-duration: 0.24 * $earth-orbit;
+  color: $color-mercury;
+  height: 19.2%;
+  width: 19.2%;
+  
+  .planet {
+    height: 7.5%;
+    width: 7.5%;
+  }
+}
+
+.venus {
+  animation-delay: -0.9 * (0.62 * $earth-orbit);
+  animation-duration: 0.62 * $earth-orbit;
+  color: $color-venus;
+  height: 25%;
+  width: 25%;
+  
+  .planet {
+    height: 8.5%;
+    width: 8.5%;
+  }
+}
+
+.earth {
+  animation-delay: -0.1 * $earth-orbit;
+  animation-duration: $earth-orbit;
+  color: $color-earth;
+  height: 32.25%;
+  width: 32.25%;
+  
+  .planet {
+    height: 8.9%;
+    width: 8.9%;
+  }
+}
+
+.mars {
+  animation-delay: -0.95 * (1.88 * $earth-orbit);
+  animation-duration: 1.88 * $earth-orbit;
+  color: $color-mars;
+  height: 39.5%;
+  width: 39.5%;
+  
+  .planet {
+    height: 5.5%;
+    width: 5.5%;
+  }
+}
+
+.jupiter {
+  animation-delay: -0.05 * (11.87 * $earth-orbit);
+  animation-duration: 11.87 * $earth-orbit;
+  color: $color-jupiter;
+  height: 52.15%;
+  width: 52.15%;
+  
+  .planet {
+    height: 13.7%;
+    width: 13.7%;
+  }
+}
+
+.saturn {
+  animation-delay: -0.8 * (29.47 * $earth-orbit);
+  animation-duration: 29.47 * $earth-orbit;
+  color: $color-saturn;
+  height: 71.4%;
+  width: 71.4%;
+  
+  .planet {
+    height: 8%;
+    width: 8%;
+  }
+  
+  .planet::before {
+    border: 4px solid #706453;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 155%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    left: 50%;
+    width: 155%;
+  }
+}
+
+.uranus {
+  animation-delay: -0.45 * (84.07 * $earth-orbit);
+  animation-duration: 84.07 * $earth-orbit;
+  color: $color-uranus;
+  height: 88.8%;
+  width: 88.8%;
+  
+  .planet {
+    height: 4%;
+    width: 4%;
+  }
+  
+  .planet::before {
+    border: 1px solid #90b9d1;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 150%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    left: 50%;
+    width: 150%;
+  }
+}
+
+.neptune {
+  animation-delay: -0.55 * (164.9 * $earth-orbit);
+  animation-duration: 164.9 * $earth-orbit;
+  color: $color-neptune;
+  height: 100%;
+  width: 100%;
+  
+  .planet {
+    height: 3.57%;
+    width: 3.57%;
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: translateY(-50%) translateX(-50%) rotate(0deg);
+  }
+  
+  100% {
+    transform: translateY(-50%) translateX(-50%) rotate(360deg);
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+  // media queries
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+@media screen and (max-width: 800px) {
+  .wolfram_info .wolfram_image{
+    position:initial;
+    margin: 25px auto;
+  }
+  .wrapper{
+    width:80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1{
+    font-size: 1.5rem;
+    height:49px;
+    margin: 20px 0;
+  }
+  h2{
+    font-size: 1.15rem;
+    height:29px;
+    margin: 20px 0;
+  }
+  .wrapper{
+    width:90%;
+  }
+  .solar_sys .distance_info{
+    width: 100%;
+    top: 50px;
+    left: 0;
+    padding: 1px 5px;
+    line-height:18px;
+  }
+}
+@media screen and(max-width: 370px){
+  .selection{
+    p{
+      padding: 1px 1px;
+    }
+  }
+}
